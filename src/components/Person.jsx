@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 function Person() {
     const [name, setName] = useState('Hod');
     const [age, setAge] = useState('5');
-    const [gender, setGender] = useState('Bi-cycle')
+    const [gender, setGender] = useState('Apache Helicopter')
     const [modal, showModal] = useState(false)
 
     function handleChangeName(e) {

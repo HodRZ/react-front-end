@@ -28,17 +28,18 @@ function Person() {
     }
 
     return (
-        <div className=''>
-            <form onSubmit={handleSubmit} method="post" className='flex flex-col place-self-center'>
-                <h2>My Name is {name}</h2>
-                <input type="text" id='name' onChange={handleChangeName} />
-                <h2>My Age is {age}</h2>
-                <input type="number" id='age' onChange={handleChangeAge} />
-                <h2>My Name is {gender}</h2>
-                <input type="text" id='gender' onChange={handleChangeGender} />
-                <button >Click Me</button>
-            </form>
-
+        <div className='w-screen flex justify-center'>
+            <div className='w-32 flex'>
+                <form onSubmit={handleSubmit} method="post" className='flex flex-col place-self-center bg-zinc-500 font-mono'>
+                    <h2>My Name is {name}</h2>
+                    <input type="text" id='name' className='' onChange={handleChangeName} />
+                    <h2>My Age is {age}</h2>
+                    <input type="number" id='age' onChange={handleChangeAge} />
+                    <h2>I'm a {gender}</h2>
+                    <input type="text" id='gender' onChange={handleChangeGender} />
+                    <button >Click Me</button>
+                </form>
+            </div>
         </div>
     );
 }

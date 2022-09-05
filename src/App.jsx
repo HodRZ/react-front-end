@@ -1,9 +1,11 @@
 import './App.css';
+import Hero from './components/Hero';
 import Person from './components/Person';
 
 function App() {
   return (
-    <div className="App h-screen bg-zinc-300">
+    <div className="App">
+      <Hero />
       <Person />
 
     </div>

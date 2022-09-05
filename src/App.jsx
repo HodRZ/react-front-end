@@ -1,9 +1,13 @@
 import './App.css';
+import Hero from './components/Hero';
+import Person from './components/Person';
 
 function App() {
   return (
     <div className="App">
-      <h1>Hey Mom!</h1>
+      <Hero />
+      <Person />
+
     </div>
   );
 }

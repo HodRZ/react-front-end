@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 
 function Hero(props) {
     return (
-        <div className='h-[50vh] bg-slate-400 text-lg md:text-5xl  font-mono font-semibold'>
+        <div className='h-[39vh] bg-zinc-300 text-lg md:text-5xl  font-mono font-semibold'>
             <div className='flex h-full place-items-center justify-evenly'>
                 <motion.p initial={{ scale: 2 }}
                     animate={{ scale: [0.5, 2, 0.5] }}

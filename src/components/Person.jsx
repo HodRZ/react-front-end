@@ -35,14 +35,15 @@ function Person() {
     }
 
     return (
-        <div className='h-fit flex flex-col justify-center items-center py-16 bg-amber-600'>
+        <div className='h-fit flex flex-col justify-center items-center py-16 bg-gradient-to-t from-red-900 to-zinc-300'>
             <motion.button
                 onClick={showForm}
                 whileHover={{ scale: 1.5 }}
                 whileTap={{ scale: 0.4 }}
-                className='text-2xl md:text-5xl border-x-2 rounded-lg bg-amber-600'>
+                className='text-2xl backdrop-blur-lg  md:text-5xl border-x-2 rounded-lg '>
                 Enter Info
             </motion.button>
+
             <div className='flex mt-16 '>
                 <form data-testid='userForm' onSubmit={handleSubmit} method="post" className='flex flex-col place-self-center text-xl md:text-4xl font-mono'>
                     <h2 data-testid='name'>My Name is {name}</h2>

@@ -1,11 +1,12 @@
 import axios from 'axios';
 import React, { useState } from 'react';
-
+import { motion } from 'framer-motion'
 
 function Person() {
     const [name, setName] = useState('Hod');
     const [age, setAge] = useState('5');
     const [gender, setGender] = useState('Bi-cycle')
+    const [modal, showModal] = useState(false)
 
     function handleChangeName(e) {
         setName(e.target.value)
@@ -29,18 +30,30 @@ function Person() {
         e.target.age.value = ''
         e.target.gender.value = ''
     }
+    function showForm() {
+        showModal(!modal)
+    }
 
     return (
-        <div className='w-screen flex justify-center'>
-            <div className='w-32 flex'>
-                <form data-testid='userForm' onSubmit={handleSubmit} method="post" className='flex flex-col place-self-center bg-zinc-500 font-mono'>
+        <div className='h-fit flex flex-col justify-center items-center py-16 bg-amber-600'>
+            <motion.button
+                onClick={showForm}
+                whileHover={{ scale: 1.5 }}
+                whileTap={{ scale: 0.4 }}
+                className='text-2xl md:text-5xl border-x-2 rounded-lg bg-amber-600'>
+                Enter Info
+            </motion.button>
+            <div className='flex mt-16 '>
+                <form data-testid='userForm' onSubmit={handleSubmit} method="post" className='flex flex-col place-self-center text-xl md:text-4xl font-mono'>
                     <h2 data-testid='name'>My Name is {name}</h2>
-                    <input type="text" id='name' data-testid='name-input' onChange={handleChangeName} />
+                    <input className='border-t-2 border-x-2 rounded-t-xl border-zinc-600 bg-zinc-200 ' type="text" id='name' data-testid='name-input' onChange={handleChangeName} />
                     <h2 data-testid='age'>My Age is {age}</h2>
-                    <input type="number" id='age' data-testid='age-input' onChange={handleChangeAge} />
+                    <input className='border-x-2 border-zinc-600 bg-zinc-200 ' type="number" id='age' data-testid='age-input' onChange={handleChangeAge} />
                     <h2 data-testid='gender'>I'm a {gender}</h2>
-                    <input type="text" id='gender' data-testid='gender-input' onChange={handleChangeGender} />
-                    <button >Click Me</button>
+                    <input className='border-x-2 border-zinc-600 bg-zinc-200 ' type="text" id='gender' data-testid='gender-input' onChange={handleChangeGender} />
+                    <motion.button whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }}
+                        className='mt-3 rounded-b-xl border-b-2 border-red-900 bg-zinc-200 hover:bg-black hover:text-white text-red-900'>See the Magic</motion.button>
                 </form>
             </div>
         </div>

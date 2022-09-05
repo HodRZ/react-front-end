@@ -32,7 +32,6 @@ function Person() {
     }
     function showForm() {
         showModal(!modal)
-        console.log(modal)
     }
 
     return (
@@ -41,11 +40,11 @@ function Person() {
                 onClick={showForm}
                 whileHover={{ scale: 1.5 }}
                 whileTap={{ scale: 0.4 }}
-                className='text-5xl border-x-2 rounded-lg bg-amber-600'>
+                className='text-2xl md:text-5xl border-x-2 rounded-lg bg-amber-600'>
                 Enter Info
             </motion.button>
             <div className='flex mt-16 '>
-                <form data-testid='userForm' onSubmit={handleSubmit} method="post" className='flex flex-col place-self-center text-4xl font-mono'>
+                <form data-testid='userForm' onSubmit={handleSubmit} method="post" className='flex flex-col place-self-center text-xl md:text-4xl font-mono'>
                     <h2 data-testid='name'>My Name is {name}</h2>
                     <input className='border-t-2 border-x-2 rounded-t-xl border-zinc-600 bg-zinc-200 ' type="text" id='name' data-testid='name-input' onChange={handleChangeName} />
                     <h2 data-testid='age'>My Age is {age}</h2>

@@ -8,8 +8,8 @@ describe('Super Deluxe Form', () => {
         render(<Person />);
         const input = screen.getByTestId('name-input');
         const name = screen.getByTestId('name');
-        fireEvent.change(input, { target: { value: 'Hassan' } });
-        expect(name).toHaveTextContent(`Hassan`)
+        fireEvent.change(input, { target: { value: 'Potato' } });
+        expect(name).toHaveTextContent(`Potato`)
     })
 
     test('Form, can change Age', async () => {
